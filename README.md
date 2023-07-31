@@ -63,4 +63,4 @@ da aplicação. Segue o procedimento completo em:
 https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 ## Estrutura 
-![Estrutura]([docs/projecttree.jpg](https://github.com/gugacosta/Projeto_integrado/blob/main/docs/projectree.JPG)https://github.com/gugacosta/Projeto_integrado/blob/main/docs/projectree.JPG)
+![Estrutura]([(https://github.com/gugacosta/Projeto_integrado/blob/main/docs/projectree.JPG])
