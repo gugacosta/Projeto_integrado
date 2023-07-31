@@ -1,0 +1,25 @@
+{% extends 'estacionamento/basepublic.html' %}
+    
+{% load static %}
+
+{% block title %}Confirmação Solicitação{% endblock %}
+
+{% block content %}
+
+<head>
+    <title>Solicitação de Reserva</title>
+    <link rel="stylesheet" href="{% static 'css/solicitacaoreserva.css' %}">
+</head>
+<body>
+    <div class="mensagem-confirmacao">
+      <p>
+        Solicitação processada, logo o administrador <br>
+        entrará em contato via telefone para confirmação <br>
+        reserva.
+      </p>
+
+    </div>
+    
+</body>
+
+{% endblock %}

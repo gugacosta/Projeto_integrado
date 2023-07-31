@@ -1,0 +1,24 @@
+{% extends 'estacionamento/basepublic.html' %}
+    
+{% load static %}
+
+{% block title %}Dúvidas/Sugestões/Reclamações{% endblock %}
+
+{% block content %}
+
+<head>
+    <title>Dúvidas/Sugestões/Reclamações</title>
+    <link rel="stylesheet" href="{% static 'css/duvidassugestoesreclamacoes.css' %}">
+</head>
+<body>
+    <div class="solicitacao-reserva-container">
+      <h1 class="title-form-solicitacao">Dúvidas/Sugestões/Reclamações</h1>
+      <form action="." method="post">
+          {% csrf_token %}
+          {{ form.as_table }}
+          <input type="submit" value="Enviar">      
+      </form>
+    </div>
+</body>
+
+{% endblock %}

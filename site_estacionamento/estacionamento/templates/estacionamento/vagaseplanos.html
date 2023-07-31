@@ -1,0 +1,53 @@
+{% extends 'estacionamento/basepublic.html' %}
+    
+{% load static %}
+
+{% block title %}Planos e Vagas{% endblock %}
+
+{% block content %}
+
+
+<div class="vagaseplanos-container">
+    <div class="tabela-container">
+        <h1 class="tabela-titulo">Planos</h1>
+        <table class="tabela-geral">
+            <tr>
+                <th class="tabela-linhas">Tipo de Automóvel</th>
+                <th class="tabela-linhas">Frequência</th>
+                <th class="tabela-linhas">Preço</th>
+            </tr>
+            {% for plano in planos_info %}
+            <tr>
+                <td class="tabela-linhas">{{ plano.tipo_automovel }}</td>
+                <td class="tabela-linhas">{{ plano.frequencia }}</td>
+                <td class="tabela-linhas">{{ plano.preço }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="tabela-container">
+        <h1 class="tabela-titulo">Vagas</h1>
+        <table class="tabela-geral">
+            <tr>
+                <th class="tabela-linhas">Número da Vaga</th>
+                <th class="tabela-linhas">Status</th>
+            </tr>
+            {% for item in vagas_info %}
+            <tr>
+                <td class="tabela-linhas">{{ item.vaga_id }}</td>
+                {% if item.status == "Reservado" %}
+                    <td class="tabela-linhas" style="background-color: lightcoral">{{ item.status }}</td>
+                {% else %}
+                    <td class="tabela-linhas" style="background-color: lightgreen;">{{ item.status }}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    
+
+</div>
+{% endblock %}
+   

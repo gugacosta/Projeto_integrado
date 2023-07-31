@@ -1,0 +1,28 @@
+{% extends 'estacionamento/basepublic.html' %}
+    
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/loginpage.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Faça login</h2>
+        <form class="login-form" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Nome do Usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <input type="submit" value="Login">
+
+            {% for k,v in form.errors.items %}
+                {{ v }}
+            {% endfor %}
+        </form>
+    </div>
+</body>
+
+{% endblock %}

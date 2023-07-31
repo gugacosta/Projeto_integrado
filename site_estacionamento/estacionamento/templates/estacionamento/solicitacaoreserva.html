@@ -1,0 +1,24 @@
+{% extends 'estacionamento/basepublic.html' %}
+    
+{% load static %}
+
+{% block title %}Solicitar Reserva{% endblock %}
+
+{% block content %}
+
+<head>
+    <title>Solicitação de Reserva</title>
+    <link rel="stylesheet" href="{% static 'css/solicitacaoreserva.css' %}">
+</head>
+<body>
+    <div class="solicitacao-reserva-container">
+      <h1 class="title-form-solicitacao">Solicitação de Reserva</h1>
+      <form action="." method="post">
+          {% csrf_token %}
+          {{ form.as_table }}
+          <input type="submit" value="Solicitar Reserva">      
+      </form>
+    </div>
+</body>
+
+{% endblock %}
